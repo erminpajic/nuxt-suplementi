@@ -2,7 +2,7 @@
 	<div class="page-wrapper">
 		<UiHeader/>
 		<component :is="component" :data="item"/>
-		<!--<Newsletter/>-->
+		<UiNewsletter/>
 		<UiFooter/>
 	</div>
 </template>

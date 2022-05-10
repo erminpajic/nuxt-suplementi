@@ -1,6 +1,10 @@
 <template>
 	<div class="wrapper nw-wrapper">
-		<ManageBody/>
+		<div class="nw-body">
+			<div class="nw-headline">Postanimo prijatelji</div>
+			<div class="nw-title">Prijavi se na newsletter</div>
+			<div class="nw-subtitle">i ostvari <strong>10% popusta</strong> na prvu kupovinu</div>
+		</div>
 		<div class="nw-cnt">
 			<form action="" class="nw-form">
 				<div class="nw-fields">
@@ -22,12 +26,12 @@
 	</div>
 </template>
 
+<style lang="less">
+	
+</style>
+
 <script>
-import ManageBody from "./ManageBody.vue";
 	export default {
 		name: "Manage",
-		components: {
-			ManageBody
-		}
 	}
 </script>

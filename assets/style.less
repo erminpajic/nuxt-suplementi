@@ -1232,8 +1232,112 @@ legend{
 	&:before{.transform(scaleX(-1)); left: unset;}
 }
 
+/*------- newsletter -------*/
+.page-cms{
+	.nw{
+		&:before{ .pseudo(750px,226px); right: 0; top: -226px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 80%);}
+	}
+	&.admin_toolbar{
+		.sidebar{top: 140px;}
+	}
+	@media(max-width: @l){
+		&.admin_toolbar{
+			.sidebar{top: 130px;}
+		}
+		.nw{
+			&:before{width: 500px;}
+		}
+	}
+	@media(max-width: @t){
+		&.admin_toolbar{
+			.sidebar{top: 110px;}
+		}
+		.nw{
+			&:before{width: 315px;}
+		}
+	}
+	@media(max-width: @tp){
+		.nw:before{display: none;}
+	}
+}
+.nw{background: url(~assets/images/bg-newsletter.jpg) center top no-repeat; background-size: cover; position: relative; z-index: 1;
+	@media(max-width: @tp){background: url(~assets/images/nw-980.jpg) center top no-repeat; background-size: cover;}
+}
+.nw-wrapper{max-width: 540px; min-height: 580px; padding-top: 115px;
+	@media(max-width: @l){margin: 0 auto; padding-top: 90px; min-height: 530px;}
+	@media(max-width: @t){padding-top: 40px; min-height: 390px; max-width: 460px;}
+	@media(max-width: @tp){padding-top: 32px; min-height: unset; padding-bottom: 32px;}
+	@media(max-width: @m){max-width: unset; width: 100%; padding-left: 15px; padding-right: 15px;}
+}
+.nw-body{
+	padding: 74px 0 20px; position: relative; .font2; text-align: center;
+	&:before{position: absolute; .icon-newsletter; font: 56px/56px @fonti; color: #fff; left: 50%; top: 0px; margin-left: -28px;}
+	@media(max-width: @t){padding: 62px 0 20px;
+		&:before{margin-left: -22.5px; font: 45px/45px @fonti;}
+	}
+	@media(max-width: @tp){padding: 56px 0 12px;
+		&:before{font: 40px/40px @fonti; margin-left: -20px;}
+	}
+}
+.nw-headline{color: @borderHover; font-weight: bold; font-size: 17px; line-height: 20px;
+	@media(max-width: @t){font-size: 16px; line-height: 20px;}
+	@media(max-width: @tp){font-size: 14px; line-height: 18px;}
+}
+.nw-title{font-size: 39px; line-height: 48px; color: #fff; padding: 4px 0; font-weight: bold;
+	@media(max-width: @t){font-size: 32px; line-height: 40px;}
+	@media(max-width: @tp){font-size: 24px; line-height: 28px; padding: 3px 0 6px;}
+}
+.nw-subtitle{font-size: 17px; line-height: 24px; color: #fff;
+	@media(max-width: @t){font-size: 16px; line-height: 20px;}
+	@media(max-width: @tp){font-size: 15px; line-height: 19px;}
+}
+.nw-form{position: relative; display: block; width: 100%;}
+.nw-fields{box-shadow: 0 0 30px 0 rgba(0,0,0,0.15); border-radius: 30px;}
+.nw-input{
+	border-radius: 30px; padding: 0 100px 0 35px; box-shadow: 0 0 30px 0 rgba(0,0,0,0.15) !important; border-color: white;
+	.placeholder(@black,#ddd);
+	@media(max-width: @t){padding: 0 100px 0 25px;}
+}
+.nw-error{font-size: 12px; line-height: 16px; position: absolute; padding: 2px 0 0 35px; color: @white;
+	@media(max-width: @t){padding-left: 25px;}
+}
+.nw-button{
+	position: absolute; top: 0; right: 0; width: 105px; padding: 0; padding-left: 10px; background: #fff!important; color: @black!important; justify-content: flex-start; border-radius: 0 30px 30px 0;
+	span{
+		position: relative; padding-right: 23px;
+		&:before{position: absolute; .icon-arrow-button; font: 7px/7px @fonti; color: @green; right: 0; top: 6px; .transition(right); }
+	}
+	@media (min-width: @h){
+		&:hover{
+			span:before{right: -3px;}
+		}
+	}
 
-
+	@media(max-width: @t){width: 95px;}
+	@media(max-width: @tp){padding-right: 25px; width: auto;
+		span{padding-right: 18px;
+			&:before{font: 6px/6px @fonti; top: 3px;}
+		}
+	}
+}
+.nw-checkbox{
+	padding: 20px 35px 0 35px;
+	input[type=checkbox]+label{
+		padding-top: 3px;
+		&:before{border-color: #fff; width: 20px; height: 20px; font-size: 0; .transition(all,0s); }
+	}
+	input[type=checkbox]:checked+label:before{font-size: 9px; color: #fff;}
+	label span{
+		display: block; max-height: 57px; font-size: 12px; line-height: 16px; overflow: auto; padding-right: 10px; color: rgba(255,255,255,0.8); 
+		&::-webkit-scrollbar { -webkit-appearance: none; width: 3px; background-color: rgba(56,56,56,0.15);}
+		&::-webkit-scrollbar-thumb {background-color: #fff;}
+	}
+	.error{font-size: 12px; line-height: 16px; color: @white; padding: 2px 0 0 33px}
+	@media(max-width: @t){padding: 20px 30px 0 25px;}
+	@media(max-width: @m){padding: 20px 0 0 25px;}
+}
+.nw-success{color: white; text-align: center;}
+/*------- /newsletter -------*/
 
 /*------- footer -------*/
 .footer-no-newsletter{

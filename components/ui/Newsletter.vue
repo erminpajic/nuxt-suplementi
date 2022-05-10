@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="nw">
 		<Manage/>
 	</div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 import Manage from '../newsletter/widget/Manage.vue'
 	export default {
-		name: "Manage",
+		name: "Newsletter",
 		components: {
 			Manage
 		}
