@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pocetna" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-492.000000, -381.000000)">
+        <g id="Slider" transform="translate(423.000000, 164.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="arrow" transform="translate(50.000000, 202.000000)">
+                <g id="Group" transform="translate(19.000000, 15.000000)">
+                    <path d="M10.604235,10.9901028 L2.30683563,19.5895181 C1.77902081,20.1368273 0.923259547,20.1368273 0.395700966,19.5895181 C-0.131900322,19.0426959 -0.131900322,18.1558027 0.395700966,17.6090247 L7.73761839,9.99985615 L0.395914501,2.39095313 C-0.131686787,1.84390955 -0.131686787,0.957104949 0.395914501,0.410282684 C0.923515789,-0.136760895 1.77923434,-0.136760895 2.30704917,0.410282684 L10.6044485,9.00983076 C10.8682492,9.28337468 11,9.64150476 11,9.99981188 C11,10.3582961 10.8679929,10.7166917 10.604235,10.9901028 Z" id="Shape" transform="translate(5.500000, 10.000000) rotate(-180.000000) translate(-5.500000, -10.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

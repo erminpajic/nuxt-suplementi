@@ -1,0 +1,31 @@
+{
+  "name": "nuxt-suplementi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@marker/directives": "file:../marker-npm/directives",
+    "@marker/meta": "file:../marker-npm/meta",
+    "@marker/mixins": "file:../marker-npm/mixins",
+    "@marker/router": "file:../marker-npm/router",
+    "@nuxtjs/axios": "^5.13.6",
+    "@splidejs/splide": "^4.0.1",
+    "@splidejs/splide-extension-auto-scroll": "^0.4.2",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "devDependencies": {
+    "@nuxtjs/router": "^1.7.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "less": "^4.1.2",
+    "less-loader": "^7.3.0"
+  }
+}

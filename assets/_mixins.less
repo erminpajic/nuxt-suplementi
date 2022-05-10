@@ -1,0 +1,343 @@
+.transition (@element: color, @speed: .3s) {
+	transition: @arguments;
+}
+.grayscale (@bw: 100%) {
+	filter: grayscale(@bw);
+	-webkit-filter: grayscale(@bw);
+	-moz-filter: grayscale(@bw);
+}
+.text-shadow (@color, @x: 1px, @y: 1px, @blur: 0px) {
+	text-shadow: @x @y @blur @color;
+}
+.gradient(@startColor: #eee, @endColor: white) {
+	background: @startColor;
+	background-image: linear-gradient(180deg, @startColor 0%, @endColor 100%);
+	background-image: -webkit-linear-gradient(180deg, @startColor 0%, @endColor 100%);
+	background-image: -moz-linear-gradient(@startColor 0%, @endColor 100%);
+	background-image: -ms-linear-gradient(180deg, @startColor 0%, @endColor 100%);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-linear-gradient(90deg, @startColor, @endColor);
+	background-image: -ms-linear-gradient(90deg, @startColor, @endColor);
+	background-image: linear-gradient(90deg, @startColor, @endColor);
+}
+.font(@fontSize, @fontLineHeight, @fontType) {
+	font-size: @fontSize;
+	line-height: @fontLineHeight; 
+	font-family: @fontType;
+}
+.pseudo(@width, @height) {
+	content:"";
+	position: absolute;
+	display: block;
+	width:@width;
+	height:@height;
+}
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+.transform(@string){
+	transform: @string;
+	-webkit-transform: @string;
+	-ms-transform: 		 @string;
+}
+.scale (@factor) {
+	transform: scale(@factor);
+	-webkit-transform: scale(@factor);
+	-ms-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	transform: skew(@deg, @deg2);
+	-webkit-transform: skew(@deg, @deg2);
+	-ms-transform: skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	transform: translate(@x, @y);
+	-webkit-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	transform: translate3d(@x, @y, @z);
+	-webkit-transform: translate3d(@x, @y, @z);
+	-ms-transform: translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+	perspective: 		@value;
+	-webkit-perspective: 	@value;
+}
+.clear { 
+	*zoom: 1; clear:both;
+	&:before, &:after {content:""; display: table; }
+	&:after { clear: both; }
+}
+.placeholder(@color,@focusColor) {
+	&::-webkit-input-placeholder { color: @color; }
+	&:-ms-input-placeholder { color: @color; }
+	&::-moz-placeholder { color: @color; }
+	&:focus {
+		&::-webkit-input-placeholder { color: @focusColor; }
+		&:-ms-input-placeholder { color: @focusColor; }
+		&::-moz-placeholder { color: @focusColor; }
+	}
+}
+.shadow { content:""; position: absolute; left: 35px; right: 35px; top: 20px; bottom: 5px; box-shadow: 0px 10px 65px rgba(0,0,0,.6); }
+.lloader {
+	//background: #fff url(~aseets/images/loader.svg) no-repeat center center; background-size: 40px auto;
+	img { opacity: 0; .transition(opacity); }
+	&.loaded {
+		background: #fff;
+		img { opacity: 1; }
+	}
+}
+.font2{font-family: "Alverata", Arial, Helvetica, sans-serif;}
+/*------- fonts -------*/
+@font-face {
+	font-family: 'Aileron';
+	src: url('~assets/fonts/aileron-regular.woff') format('woff'), url('~assets/fonts/aileron-regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+@font-face {
+	font-family: 'Aileron';
+	src: url('~assets/fonts/aileron-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: block;
+}
+@font-face {
+	font-family: 'Alverata';
+	src: url('~assets/fonts/alverata_w06_pe_regular.woff') format('woff'), url('~assets/fonts/alverata_w06_pe_regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+@font-face {
+	font-family: 'Alverata';
+	src: url('~assets/fonts/alverata_w06_pe_semibd.woff') format('woff'), url('~assets/fonts/alverata_w06_pe_semibd.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: block;
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url('~assets/fonts/icomoon.woff?4vq4o9') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/*------- /fonts -------*/
+
+/*------- icons -------*/
+.icon-leaf2 {
+  content: "\e92f";
+}
+.icon-leaf {
+  content: "\e92e";
+}
+.icon-check {
+  content: "\e900";
+}
+.icon-danger-red {
+  content: "\e901";
+}
+.icon-danger-white {
+  content: "\e902";
+}
+.icon-arrow-small {
+  content: "\e903";
+}
+.icon-search {
+  content: "\e904";
+}
+.icon-user {
+  content: "\e905";
+}
+.icon-cart {
+  content: "\e906";
+}
+.icon-arrow-slider {
+  content: "\e907";
+}
+.icon-arrow-button {
+  content: "\e908";
+}
+.icon-free-shipping {
+  content: "\e909";
+}
+.icon-fast-shipping {
+  content: "\e90a";
+}
+.icon-returns {
+  content: "\e90b";
+}
+.icon-payments {
+  content: "\e90c";
+}
+.icon-contact {
+  content: "\e90d";
+}
+.icon-energy {
+  content: "\e90e";
+}
+.icon-immunity {
+  content: "\e90f";
+}
+.icon-sleeping {
+  content: "\e910";
+}
+.icon-liver {
+  content: "\e911";
+}
+.icon-concentration {
+  content: "\e912";
+}
+.icon-bones {
+  content: "\e913";
+}
+.icon-heart {
+  content: "\e914";
+}
+.icon-fb {
+  content: "\e915";
+}
+.icon-wa {
+  content: "\e916";
+}
+.icon-vi {
+  content: "\e917";
+}
+.icon-email {
+  content: "\e918";
+}
+.icon-copy {
+  content: "\e919";
+}
+.icon-in {
+  content: "\e91a";
+}
+.icon-reply {
+  content: "\e91b";
+}
+.icon-star {
+  content: "\e91c";
+}
+.icon-gift-card {
+  content: "\e91d";
+}
+.icon-capsule {
+  content: "\e91e";
+}
+.icon-whey {
+  content: "\e91f";
+}
+.icon-water-drop {
+  content: "\e920";
+}
+.icon-parasite {
+  content: "\e921";
+}
+.icon-molecule {
+  content: "\e922";
+}
+.icon-x {
+  content: "\e923";
+}
+.icon-coupon {
+  content: "\e924";
+}
+.icon-data {
+  content: "\e925";
+}
+.icon-lock {
+  content: "\e926";
+}
+.icon-filter {
+  content: "\e927";
+}
+.icon-calendar {
+  content: "\e928";
+}
+.icon-zoom-in {
+  content: "\e929";
+}
+.icon-diamond {
+  content: "\e92a";
+}
+.icon-total {
+  content: "\e92b";
+}
+.icon-newsletter {
+  content: "\e92c";
+}
+.icon-zoom-out {
+  content: "\e92d";
+}
+.icon-auth-widget-leaf {
+  content: "\e930";
+}
+.icon-suplements {
+  content: "\e931";
+}
+.icon-light-leaf-detail {
+  content: "\e932";
+}
+.icon-info {
+  content: "\e933";
+}
+.icon-logout {
+  content: "\e934";
+}
+
+/*------- /icons -------*/
+
+/*------- buttons -------*/
+/*.btn, input[type=submit], button{
+	position: relative; display: inline-flex; justify-content: center; align-items: center; font-weight: bold; padding: 0 40px; height: 60px; font-size: 15px; line-height: 20px; color: #fff; background: @green; text-decoration: none; .font2; border-radius: 30px; .transition(background);
+	@media (min-width: @h){
+		&:hover{color: #fff; background: @green/1.2; text-decoration: none;}
+	}
+	@media(max-width: @t){padding: 0 35px; height: 54px;} 
+	@media(max-width: @tp){font-size: 14px; line-height: 14px;}
+}
+.btn-white{
+	border: 4px solid @gray; background: #fff!important; color: @black!important; transition: border-color .3s ease-out, color .3s ease-out, background .3s ease-out; 
+	@media (min-width: @h){
+		&:hover{border-color: @green; color: white !important; background: @green !important;}
+	}
+}
+.btn-arrow{
+	span{position: relative; padding-right: 23px;
+		&:after{.pseudo(auto,auto); .icon-arrow-button; right: 0; top: 6px; font: 7px/7px @fonti; color: white; transition: right .3s ease-out, color .3s ease-out;}
+	}
+	@media (min-width: @h){
+		&:hover{
+			span:after{right: -3px; color: white;}
+		}
+	}
+	@media(max-width: @tp){
+		span{padding-right: 18px;
+			&:after{top: 4px; font: 6px/6px @fonti;}
+		}
+	}
+}
+.btn-arrow-white{
+	span:after{color: @white;}
+}
+.btn-arrow-green{
+	span:after{color: @green;}
+}
+.btn-blue{
+	background: @blue; position: relative; color: white;
+	@media (min-width: @h){
+		&:hover{background: @blue/1.3;}
+	}
+}*/
+/*------- /buttons -------*/
