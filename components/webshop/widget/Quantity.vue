@@ -1,12 +1,12 @@
 <template>
-	<div>
+	<div class="wp-qty-cnt">
 		<div class="wp-qty">
 			<a class="wp-btn-qty wp-btn-dec" @click="decreaseValue">-</a>
 			<input class="wp-input-qty" type="text" v-model="qty" />
 			<a class="wp-btn-qty wp-btn-inc" @click="increaseValue">+</a>
 			<span class="wp-message product_message product_message" style="display: none"></span>
 		</div>
-		<div class="wp-unit">unit</div>
+		<div class="wp-unit">kom</div>
 	</div>
 </template>
 
